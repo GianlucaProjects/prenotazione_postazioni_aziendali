@@ -12,12 +12,12 @@ public class Postazione {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
+    @Column(unique = true) // ho messo unique = true per garantire l'univocità del codice
     private String codice;
 
     private String descrizione;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING)  // questa annotazione l'ho cercata sul web anche se non sono sicuro se davvero serva..
     private TipoPostazione tipo;
 
     private int numeroMassimoOccupanti;
